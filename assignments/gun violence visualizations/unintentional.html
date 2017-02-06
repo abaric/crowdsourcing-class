@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+     google.charts.load('current', {'packages': ['geochart']});
+     google.charts.setOnLoadCallback(drawMarkersMap);
+
+      function drawMarkersMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['Cities',   'Unintentional'],
+        ['McDONOUGH',1],
+        ['Downey',1], 
+        ['DECATUR',1], 
+        ['Swarthmore',1],
+        ['WEST FRANKFORT',1],
+        ['Philadelphia',1],
+        ['New York City',1],
+        ['Springfield',1],
+        ['Santa Rosa',1],
+        ['MILWAUKEE',1],
+        ['GRAND RAPIDS',1],
+        ['Lafayette',1],
+        ['North Portland',1],
+        ['Alon Shvut',1],
+        ['Houma',1],
+        ['Queens',1],
+        ['HUBER HEIGHTS',1],
+        ['Volo',2],
+        ['Amarillo',2],
+        ['CHARLOTTE',2],
+        ['Tulsa',2],
+        ['Shrewsbury',2],
+        ['Palestine',2],
+        ['Atlantic City',5],
+        ['Chardon' ,5],
+        ['NEW FLORENCE',5],
+        ['Compton',5],
+        ['Gardine',6],
+        ['Columbus',6],
+        ['GREENVILLE',6],
+        ['BRIDGEPORT',6],
+        ['OAKLAND',6],
+        ['Willard',6],
+        ['Sanford',6],
+        ['SHREVEPORT',6],
+        ['Antioch',6],
+        ['RIDGELAND',6],
+        ['Schaumburg',6],
+        ['Danville',6],
+        ['MADISON',6],
+        ['Montgomery',6],
+        ['Clarksdale',6],
+        ['PARK CITY',7],
+        ['Madison',7],
+        ['REIDSVILLE',7],
+        ['Wilmington',7],
+        ['Bessemer City',7],
+        ['Baton Rouge',7],
+        ['Houston',7],
+        ['ROCK HILL',8],
+        ['Forkland',10],
+        ['Phil­adelphia',10],
+        ['AURORA',10],
+        ['Fort Smith',10],
+        ['NEW ORLEANS',10],
+        ['Fox Lake',10],
+        ['MADISON',10],
+        ['CORALVILLE',10],
+        ['GREER',10],
+        ['Kalamazoo',10],
+        ['RICHMOND',10],
+        ['HIGHLAND',10],
+        ['PITTSFIELD',10],
+        ['Ferguson',10],
+        ['Des Moines',10],
+        ['MEMPHIS',10],
+        ['Pittsfield',10],
+        ['Chicago',10],
+        ['Helena',10],
+        ['DeKalb',10],
+        ['Fargo',10],
+        ['San Bernardino',10],
+        ['FAYETTEVILLE',10],
+        ['Bay Fair',10],
+        ['JACKSONVILLE',10],
+        ['Elmira',10],
+        ['CONYERS',12],
+        ['Atlantic City',13],
+        ['Mayflower',13],
+        ['Kinston',13],
+        ['Boulder',13],
+        ['Brooklyn',13],
+        ['Jackson',13],
+        ['Dallas',13],
+        ['MYRTLE BEACH',13],
+        ['COLBY',13],
+        ['Nashville',13],
+        ['Minneapolis' ,13],
+        ['Spartanburg',13],
+        ['Las Cruces',13],
+        ['PRYOR',13],
+        ['Lithonia',13],
+        ['INDIANAPOLIS',13],
+        ['Columbia',13],
+        ['Los Angeles',13],
+        ['Augusta' ,13],
+        ['CORDELE',13],
+        ['Charleston',13],
+        ['Fairmont' ,13],
+        ['New Orleans',13],
+        ['San Diego',13]
+      ]);
+
+      var options = {
+        title: 'Unintentional Shootings by City',
+        region: 'US',
+        displayMode: 'markers',
+        resolution: 'provinces',
+        colorAxis: {colors: ['green', 'blue']}
+      };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    };
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Attribute', 'USA', 'India', 'Hong Kong', 'Turkey', 'Egypt'],
+          ['Intelligence', 5.70, 6.0, 5.66, 6.25, 6.33],
+          ['Humor', 5.72, 5.61, 4.67, 6.0, 6.0],
+          ['Wealth', 3.81, 4.91, 4.0, 6.0, 4.33],
+          ['Physical Attractiveness', 5.05, 5.74, 3.67, 5.5, 6.33],
+          ['Social Status', 3.34, 5.13, 4.0, 5.75, 5.67],
+          ['Emotional Sensitivity', 5.22, 6.00, 4.67, 5.0, 5.33]
+        ]);
+        var options = {
+          chart: {
+            title: 'Individual Attribute Scores by Country',
+            subtitle: 'Quality controlled data for the individual\'s response to weighting each attribute, organized by country',
+          }
+        };
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="columnchart_material" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

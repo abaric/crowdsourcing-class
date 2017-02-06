@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Attribute', 'East Asian', 'South Asian', 'Black', 'Latino', 'Middle Eastern', 'White'],
+          ['Intelligence',  6.08,  5.80,  6.33,  5.33,  6.33,  5.74], 
+          ['Humor',  5.69,  5.27,  6.33,  5.00,  6.00,  5.79], 
+          ['Wealth',  4.23,  5.27,  4.50,  4.00,  4.33,  3.97], 
+          ['Physical Attractiveness',  5.54,  5.40,  5.83,  5.00,  6.33,  5.03], 
+          ['Social Status',  4.38,  5.40,  2.67,  3.67,  5.67,  3.66], 
+          ['Emotional Sensitivity',  5.92,  5.60,  4.83,  4.00,  5.33,  5.39]
+        ]);
+        var options = {
+          chart: {
+            title: 'Individual Attribute Scores by Ethnicity',
+            subtitle: 'Quality controlled data for the individual\'s response to weighting each attribute, organized by ethnicity',
+          }
+        };
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="columnchart_material" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

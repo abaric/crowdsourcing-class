@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Attribute', '18-24', '25-30', '31-45', '46-60', '61+'],
+          ['Intelligence',  5.80,  5.93,  5.93,  5.67,  6.25],
+          ['Humor',  5.20,  5.21,  5.93,  6.06,  6.00], 
+          ['Wealth',  4.07,  4.57,  4.41,  4.11,  4.75], 
+          ['Physical Attractiveness',  5.33,  5.29,  5.30,  5.28,  5.25], 
+          ['Social Status',  3.67,  3.71,  4.48,  4.00,  5.25],  
+          ['Emotional Sensitivity ',  5.47,  5.57,  5.19,  5.78,  4.75],
+        ]);
+        var options = {
+          chart: {
+            title: 'Individual Attribute Scores by Age',
+            subtitle: 'Quality controlled data for the individual\'s response to weighting each attribute, organized by age',
+          }
+        };
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="columnchart_material" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

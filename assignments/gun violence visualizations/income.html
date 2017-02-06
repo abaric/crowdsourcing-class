@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["State", "Income", "Shootings"],
+	        ['Alabama', 41, 4],
+	        ['Alaska', 69, 1],
+	        ['Arizona',  46, 0],
+	        ['Arkansas', 38, 3],
+	        ['California',  67, 8],
+	        ['Colorado',  55, 3],
+	        ['Connecticut',  65, 1],
+	        ['Delaware',  57, 1],
+	        ['Florida', 44, 3],
+	        ['Georgia', 46, 4],
+	        ['Hawaii',  62, 0],
+	        ['Idaho', 43, 0],
+	        ['Illinois',  53, 5],
+	        ['Indiana', 46, 2],
+	        ['Iowa',  49, 2],
+	        ['Kansas', 48, 1],
+	        ['Kentucky', 41, 1],
+	        ['Louisiana', 41, 5],
+	        ['Maine', 46, 1],
+	        ['Maryland', 70, 0],
+	        ['Massachusetts',  64, 0],
+	        ['Michigan', 45, 3],
+	        ['Minnesota',  51, 6],
+	        ['Mississippi', 36, 10],
+	        ['Missouri', 45, 1],
+	        ['Montana', 44, 2],
+	        ['Nebraska', 50, 0],
+	        ['Nevada', 49, 0],
+	        ['New Hampshire', 64, 0],
+	        ['New Jersey',  60, 0],
+	        ['New Mexico', 42, 0],
+	        ['New York',  55, 4],
+	        ['North Carolina', 44, 4],
+	        ['North Dakota', 52, 0],
+	        ['Ohio',  46, 4],
+	        ['Oklahoma',  43, 2],
+	        ['Oregon', 47, 2],
+	        ['Pennsylvania', 50, 2],
+	        ['Rhode Island',  54, 0],
+	        ['South Carolina',  42, 3],
+	        ['South Dakota',  48, 0],
+	        ['Tennessee',  42, 8],
+	        ['Texas',  49, 4],
+	        ['Utah',   56, 2],
+	        ['Vermont', 53, 0],
+	        ['Virginia',  63, 1],
+	        ['Washington',  58, 0],
+	        ['West Virginia',  38, 0],
+	        ['Wisconsin',  51, 2],
+	        ['Wyoming',  56, 3]
+	        ]);
+
+        var options = {
+          title: 'Income vs. Number of Shootings in US States',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 3000px; height: 500px;"></div>
+  </body>
+</html>
